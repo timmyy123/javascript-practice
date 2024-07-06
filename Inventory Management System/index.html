@@ -2,17 +2,22 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Inventory Management</title>
+    <title>Inventory Management System</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Inventory Management System</h1>
-    <input type="text" id="itemName" placeholder="Item Name">
-    <input type="number" id="itemQuantity" placeholder="Quantity">
-    <button onclick="addItem()">Add Item</button>
-    <button onclick="updateItem()">Update Quantity</button>
-    <button onclick="removeItem()">Remove Item</button>
-    <h2>Inventory List</h2>
-    <div id="inventoryList"></div>
+    <div class="container">
+        <h1>Inventory Management System</h1>
+        <div class="form-group">
+            <input type="text" id="itemName" placeholder="Item Name">
+            <input type="number" id="itemQuantity" placeholder="Quantity">
+            <button onclick="addItem()">Add Item</button>
+            <button onclick="updateItem()">Update Quantity</button>
+            <button onclick="removeItem()">Remove Item</button>
+        </div>
+        <h2>Inventory List</h2>
+        <div id="inventoryList" class="inventory-list"></div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

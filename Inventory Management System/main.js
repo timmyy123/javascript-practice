@@ -38,3 +38,6 @@ function displayInventory() {
         inventoryList.innerHTML += `<p>${item.name}: ${item.quantity}</p>`;
     });
 }
+
+// Initialize the display
+displayInventory();
