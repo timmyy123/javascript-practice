@@ -21,6 +21,7 @@
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            padding:10px;
         }
         .management input{
             width: 75%;
@@ -44,9 +45,10 @@
             <input type="text" id="quantity" placeholder="Quantity">
             <button id="add" onclick="addItem()">Add Item</button>
             <button id="update">Update Quality</button>
-            <button id="remove">Remove Item</button>
+            <button id="remove" onclick="removeItem()">Remove Item</button>
             <h2>Inventory List</h2>
-            <div class="inventory list">               
+            <div class="inventory list"> 
+                <ul id="itemList"></ul>              
             </div>
 
         </div>
