@@ -7,14 +7,15 @@ function getName(){
 function getQuantity(){
     let quantityInput = document.getElementById('quantity');
     let quantity = quantityInput.value;
+
     return quantity
 }
 
 function addItem(){
     let name = getName();
     let quantity = getQuantity();
+    console.log(name,typeof(quantity))
     if (name!== '' && quantity!==''){
-        // console.log(name, quantity)
         let newItem = document.createElement('li')
         newItem.classList.add('item')
         newItem.textContent = `${name}: ${quantity}`
@@ -33,6 +34,22 @@ function removeItem(){
         for(let item of itemsArray){
             if(item.textContent.startsWith(name)){
                 item.remove()
+            }
+        }
+        document.getElementById('name').value = ''
+        document.getElementById('quantity').value = ''
+    }
+}
+
+function updateQuantity(){
+    let name = getName();
+    let quantity = getQuantity();
+    if(name !== '' && quantity !== ''){
+        let items = document.getElementsByClassName('item')
+        itemsArray = Array.from(items)
+        for(let item of itemsArray){
+            if(item.textContent.startsWith(name)){
+                item.textContent = `${name}: ${quantity}`
             }
         }
         document.getElementById('name').value = ''

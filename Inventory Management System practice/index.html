@@ -2,49 +2,16 @@
 <html lang="en">
     <head>
        <meta charset="utf-8">
-       <style>
-        body{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            background-color: aliceblue;
-            height: 100vh;
-            margin: 0;
-        }        
-        .management{
-            background-color: white;
-            border: 2px solid gray;
-            border-radius: 4px;
-            max-width: 700px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding:10px;
-        }
-        .management input{
-            width: 75%;
-            margin: 5px;
-        }
-        .management button{
-            background-color: rgba(68, 142, 215, 0.731);
-            color:antiquewhite;
-            width: 75%;
-            margin: 5px;
-            border: 2px solid rgba(68, 142, 215, 0.731);
-            border-radius: 4px;
-        }
-       </style>
+       <link rel="stylesheet" href="styles.css">
        <title>Inventory management</title> 
     </head>
     <body>
         <div class="management">
             <h1 class="welcome">Inventory Management System</h1>
             <input type="text" id="name" placeholder="Item Name">
-            <input type="text" id="quantity" placeholder="Quantity">
+            <input type="number" id="quantity" placeholder="Quantity">
             <button id="add" onclick="addItem()">Add Item</button>
-            <button id="update">Update Quality</button>
+            <button id="update" onclick="updateQuantity()">Update Quality</button>
             <button id="remove" onclick="removeItem()">Remove Item</button>
             <h2>Inventory List</h2>
             <div class="inventory list"> 
